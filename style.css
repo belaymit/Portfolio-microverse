@@ -1,0 +1,634 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f9;
+}
+
+button {
+  background-color: #fff;
+  border: 1px solid #396df2;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #396df2;
+  cursor: pointer;
+  margin: 28px 40px 40px 24px;
+  outline: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  line-height: 24px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 13px 23px;
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  background: #5076cf;
+  color: #fff;
+}
+
+.portfolio-header {
+  padding-bottom: 32px;
+  border-bottom-left-radius: 80px;
+  background: url("/Images/Header\ bg@2x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top 80px center;
+  margin-left: 24px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 155px;
+  padding-top: 12px;
+}
+
+.projects img {
+  width: 90%;
+}
+
+.portfolio-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5rem;
+}
+
+.menu {
+  display: none;
+}
+
+.portfolio-text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #6070ff;
+}
+
+.hamburger-menu {
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0.5rem;
+  margin-right: 10px;
+}
+
+.hamburger-menu i {
+  color: #157fd6;
+}
+
+.headline {
+  margin: 12px;
+}
+
+.headline-header {
+  margin: 24px;
+  padding-top: 120px;
+}
+
+.portfolio-owner {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  display: flex;
+  align-items: center;
+  color: #172b4d;
+}
+
+.about-the-author {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.social-media-links {
+  margin-bottom: 36px;
+}
+
+.social-media-links h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #7f8cff;
+  margin-left: 24px;
+  text-transform: uppercase;
+}
+
+.social-media-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  list-style: none;
+  font-size: 18px;
+  margin: 0 0 32px -20px;
+}
+
+.social-media-icons .fa {
+  color: #505f79;
+}
+
+.social-media-icons a {
+  color: #505f79;
+  width: 1.8rem;
+  height: 1.87rem;
+}
+
+.work-section {
+  background-color: #f9f9f7;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.projects-cards:first-child {
+  display: none;
+}
+
+.projects-card {
+  margin: 88px 24px 0 24px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* todo */
+
+.project-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: start;
+  padding: 0 24px;
+  color: #172b4d;
+  margin-top: 0;
+}
+
+.project-screenshot {
+  padding: 12px;
+}
+
+.courses {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 24px 0 0 -25px;
+}
+
+.author-role-company {
+  display: block;
+  margin: 0;
+}
+
+.link-items {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  margin-left: -20px;
+  margin-top: 0;
+}
+
+.canopy {
+  color: #344563;
+}
+
+.list-item {
+  color: #7a869a;
+}
+
+.work-description {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  padding: 0 24px;
+  margin-top: 0;
+}
+
+.project-description {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+  margin: 24px 0 0 0;
+  padding: 0;
+}
+
+.course-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #6070ff;
+}
+
+.courses-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px;
+  height: 24px;
+  background: #ebebff;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.courses-list:nth-child(2) {
+  display: none;
+}
+
+.about-myself-section {
+  margin: 114px 24px 24px 24px;
+  border-top-right-radius: 60px;
+  padding-bottom: 114px;
+  background-color: #fff;
+}
+
+.self-description {
+  margin: 114px 24px 0 24px;
+}
+
+.self-description h1 {
+  text-align: left;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  display: flex;
+  align-items: center;
+  color: #172b4d;
+  padding-top: 114px;
+}
+
+.self-description p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.languages {
+  margin-right: 24px;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #f7f7f9;
+  border-radius: 8px;
+  margin: 12px 0 12px 0;
+  gap: 12px;
+  padding: 12px;
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.language-item a {
+  margin-right: 24px;
+  color: #172b4d;
+}
+
+.language-item h1 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+
+.hand-cursor {
+  display: none;
+}
+
+.framework-skills {
+  border-bottom: 1px solid #dddde4;
+}
+
+.footer-section {
+  background: url("./Images/contact\ form\ shapes-mobile.png");
+  border-top-left-radius: 80px;
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #6070ff;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contact-header .contact-title {
+  font-style: normal;
+  margin-top: 123px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.contact-header p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #ebebff;
+  margin: 12px 24px 0 24px;
+}
+
+.contact-form {
+  margin: 48px 24px;
+}
+
+.contact-form .input-field {
+  display: flex;
+  align-items: center;
+  padding: 0 24px 18px 24px;
+}
+
+.contact-form .input-field .input,
+.contact-form .input-field .textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 15px 38px 15px 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #172b4d;
+}
+
+.contact-form .input-field .textarea {
+  resize: none;
+  height: 170px;
+}
+
+.contact-form .input-field .input:focus,
+.contact-form .input-field .textarea:focus {
+  border: 1px solid #384404;
+}
+
+.contact-form .input-field .btn {
+  padding: 12px 16px;
+  width: 140px;
+  height: 48px;
+  background: #fff;
+  border-radius: 8px;
+  border: 0.3px dotted white;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #6070ff;
+  transition: all 0.5s ease;
+}
+
+.contact-form .input-field .btn:hover {
+  background: #5076cf;
+  color: #fff;
+}
+
+.bottom-rectangle {
+  width: 134px;
+  height: 5px;
+  position: absolute;
+  left: 107px;
+  bottom: 10px;
+  background: #0d151e;
+  border-radius: 10px;
+  margin-bottom: 0;
+}
+
+/* Large screen - Desktop */
+
+@media (min-width: 768px) {
+  .portfolio-header {
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 70px;
+    background-color: #fff;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .menu-items {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .menu-item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;
+  }
+
+  .menu-item a {
+    text-decoration: none;
+    color: #344563;
+  }
+
+  .headline {
+    padding-bottom: 88px;
+    margin-top: 18px;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .headline-container {
+    margin: 0 260px;
+    background-color: #fff;
+  }
+
+  .work-section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .projects-card {
+    display: flex;
+    margin: 24px 142px;
+    padding: 48px;
+    gap: 18px;
+  }
+
+  .author-role-company {
+    display: block;
+    margin: 0;
+  }
+
+  .projects-card:last-child {
+    display: none;
+  }
+
+  .projects-card:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+
+  .projects-card:nth-child(5) {
+    display: none;
+  }
+
+  .projects-card:first-child {
+    display: flex;
+  }
+
+  .projects img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .courses-list:nth-child(2) {
+    display: flex;
+  }
+
+  .card-body.hand-cursor-position {
+    position: relative;
+  }
+
+  .hand-cursor img {
+    width: 57px;
+    height: 57px;
+  }
+
+  .hand-cursor {
+    display: block;
+    position: absolute;
+    bottom: 45px;
+    right: 87px;
+  }
+
+  .work-description {
+    margin: 0;
+    padding: 0 24px;
+  }
+
+  .about-myself-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top-right-radius: 80px;
+    margin: 0 142px;
+  }
+
+  .self-description {
+    margin-left: 142px;
+    margin-top: 0;
+  }
+
+  .self-description .social-media-links {
+    margin-left: -25px;
+  }
+
+  .languages-learned {
+    margin: 142px 24px 0 0;
+  }
+
+  .language-body .language {
+    display: block;
+  }
+
+  .language-body {
+    display: flex;
+    gap: 12px;
+  }
+
+  .language span {
+    text-align: center;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .contact-header {
+    margin-bottom: 12px;
+  }
+
+  .contact-form,
+  .contact-header {
+    width: 40%;
+  }
+
+  .input-field:last-child {
+    margin-top: 24px;
+    margin-left: 40%;
+  }
+
+  .bottom-rectangle {
+    display: none;
+  }
+}
