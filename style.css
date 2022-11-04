@@ -45,22 +45,23 @@ button:hover {
 .portfolio-header {
   padding-bottom: 32px;
   border-bottom-left-radius: 80px;
-  background: url("/Images/Header\ bg@2x.png");
+  background: url("./Images/Header\ bg@2x.png");
   background-repeat: no-repeat;
   background-size: contain;
+  background-color: #fff;
   background-position: top 80px center;
-  margin-left: 24px;
+  margin-top: 0;
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
-  margin: 12px 155px;
+  margin: 12px 12px;
   padding-top: 12px;
 }
 
 .projects img {
-  width: 90%;
+  width: 95%;
 }
 
 .portfolio-logo {
@@ -144,7 +145,7 @@ button:hover {
   gap: 12px;
   list-style: none;
   font-size: 18px;
-  margin: 0 0 32px -20px;
+  margin: 0 0 64px -20px;
 }
 
 .social-media-icons .fa {
@@ -157,6 +158,8 @@ button:hover {
   height: 1.87rem;
 }
 
+/* Work Section */
+
 .work-section {
   background-color: #f9f9f7;
   display: grid;
@@ -168,12 +171,11 @@ button:hover {
 }
 
 .projects-card {
-  margin: 88px 24px 0 24px;
+  margin: 88px 24px 0 12px;
   border-radius: 10px;
   background-color: #fff;
+  padding: 12px;
 }
-
-/* todo */
 
 .project-title {
   font-weight: 700;
@@ -265,6 +267,8 @@ button:hover {
   display: none;
 }
 
+/* About Myself section */
+
 .about-myself-section {
   margin: 114px 24px 24px 24px;
   border-top-right-radius: 60px;
@@ -294,6 +298,10 @@ button:hover {
   font-size: 16px;
   line-height: 24px;
   color: #344563;
+}
+
+.self-description .social-media-links {
+  margin-left: -20px;
 }
 
 .languages {
@@ -339,6 +347,8 @@ button:hover {
 .framework-skills {
   border-bottom: 1px solid #dddde4;
 }
+
+/* Footer section */
 
 .footer-section {
   background: url("./Images/contact\ form\ shapes-mobile.png");
@@ -468,6 +478,10 @@ textarea::placeholder {
     background-color: #fff;
   }
 
+  .navigation {
+    margin: 12px 155px;
+  }
+
   .menu {
     display: block;
   }
@@ -500,13 +514,12 @@ textarea::placeholder {
 
   .headline {
     padding-bottom: 88px;
-    margin-top: 18px;
     background-size: contain;
     background-position: center;
   }
 
   .headline-container {
-    margin: 0 260px;
+    margin: 18px 260px 0 260px;
     background-color: #fff;
   }
 
@@ -578,7 +591,6 @@ textarea::placeholder {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     border-top-right-radius: 80px;
-    margin: 0 142px;
   }
 
   .self-description {
@@ -625,7 +637,7 @@ textarea::placeholder {
 
   .input-field:last-child {
     margin-top: 24px;
-    margin-left: 40%;
+    margin-left: 30%;
   }
 
   .bottom-rectangle {
