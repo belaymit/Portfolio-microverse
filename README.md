@@ -36,7 +36,7 @@ Basic understanding of - HTML - CSS - Figma design
 
 ### Deployment
 >You can access the site via the following link.
-     https://belaymit.github.io/Portfolio-microverse/
+      https://belaymit.github.io/Portfolio-microverse/
 ## Authors
 
 👤 **Author1**
