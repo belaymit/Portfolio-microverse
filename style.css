@@ -280,7 +280,7 @@ button:hover {
   margin: 114px 24px 0 24px;
 }
 
-.self-description h1 {
+.self-description h2 {
   text-align: left;
   font-style: normal;
   font-weight: 700;
@@ -300,8 +300,8 @@ button:hover {
   color: #344563;
 }
 
-.self-description .social-media-links {
-  margin-left: -20px;
+.social-media-links h3{
+  margin-left: 20px;
 }
 
 .languages {
@@ -600,6 +600,16 @@ textarea::placeholder {
 
   .self-description .social-media-links {
     margin-left: -25px;
+  }
+
+  .social-media-links h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7f8cff;
+    margin-left: 24px;
+    text-transform: uppercase;
   }
 
   .languages-learned {
