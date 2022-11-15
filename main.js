@@ -4,22 +4,16 @@ const navToggle = document.querySelector('.nav-toggle');
 const links = document.querySelector('.links');
 
 // eslint-disable-next-line no-undef
-icon = navToggle.querySelector('.fa-bars');
-// eslint-disable-next-line func-names
-navToggle.onclick = function () {
-  // eslint-disable-next-line no-undef
-  if (icon.classList.contains('fa-bars')) {
-    // eslint-disable-next-line no-undef
-    icon.classList.replace('fa-bars', 'fa-times');
-  } else {
-    // eslint-disable-next-line no-undef
-    icon.classList.replace('fa-times', 'fa-bars');
-  }
-};
+icon = navToggle.querySelector('.fa-times');
+// eslint-disable-next-line no-undef
+openIcon = navToggle.querySelector('.fa-bars');
 
 navToggle.addEventListener('click', () => {
   links.classList.toggle('show-links');
-  navToggle.classList.add('close-icon');
+  // eslint-disable-next-line no-undef
+  icon.classList.toggle('close-icon');
+  // eslint-disable-next-line no-undef
+  openIcon.classList.toggle('open-icon');
 });
 
 window.addEventListener('scroll', () => {
@@ -38,10 +32,12 @@ window.addEventListener('scroll', () => {
       menuItem.classList.add('active');
     }
     menuItem.addEventListener('click', () => {
-      links.classList.remove('show-links');
-      navToggle.classList.remove('close-icon');
-      // eslint-disable-next-line no-undef
-      icon.classList.replace('fa-times', 'fa-bars');
+      links.classList.toggle('show-links');
     });
+    links.classList.remove('show-links');
+    // eslint-disable-next-line no-undef
+    icon.classList.remove('close-icon');
+    // eslint-disable-next-line no-undef
+    openIcon.classList.remove('open-icon');
   });
 });
