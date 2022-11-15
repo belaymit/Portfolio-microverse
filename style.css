@@ -124,16 +124,6 @@ header nav {
   color: #063251;
 }
 
-.nav-header .nav-toggle.close-icon {
-  position: absolute;
-  top: 10;
-  right: 0;
-  margin-right: 30px;
-  z-index: 100;
-  font-size: 24px;
-  color: #fff;
-}
-
 .nav-center .links {
   height: 0;
   overflow: hidden;
@@ -176,6 +166,7 @@ header nav {
   height: 100vh;
   width: 100%;
   background: transparent;
+  backdrop-filter: blur(5px);
   background-color: #6070ff;
   opacity: 0.9;
   color: #fff;
@@ -214,6 +205,25 @@ header nav {
   display: inline-block;
   background: rgb(223, 162, 83);
   transition: all 0.5s ease;
+}
+
+.nav-toggle .fa-times {
+  position: absolute;
+  z-index: 100;
+  color: #fff;
+  right: 0;
+  top: 0;
+  font-size: 24px;
+  margin: -10px 8px 0 0;
+  display: none;
+}
+
+.nav-toggle .fa-bars.open-icon {
+  display: none;
+}
+
+.nav-toggle .fa-times.close-icon {
+  display: block;
 }
 
 .headline {
