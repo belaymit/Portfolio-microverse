@@ -43,89 +43,101 @@ window.addEventListener('scroll', () => {
   });
 });
 
-window.addEventListener('load', () => {
-  // projectTitle.innerText = 'Project Title';
-  // eslint-disable-next-line no-console
-  // console.log(projectTitle);
-});
-
 // eslint-disable-next-line no-unused-vars
-const workSection = [
-  {
+const workSection = {
+  project1: {
     id: 1,
     name: 'Tonic',
-    companies: ['Code', 'CSS', 2015],
-    img: './Images/Snapshoot Portfolio__.png',
-    desc: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
-    technologies: ['html', 'css', 'javaScript'],
+    description: `Lorem Ipsum is simply dummy text of the printing and 
+      typesetting industry. Lorem Ipsum has been the industry's standard 
+      dummy text ever since the 1500s, when an unknown printer took a 
+      galley of type and scrambled it to make a type specimen book. 
+      It has survived not only five centuries, but also the leap into 
+      electronic typesetting, remaining essent`,
+    image: '/Images/Snapshoot Portfolio__1.png',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    linkToLive: '#',
+    linkToSource: '#',
+    featured: '',
   },
-];
 
-// const listItems = document.querySelectorAll('.list-item');
-// // eslint-disable-next-line no-console
-// console.log(listItems);
+  project2: {
+    id: 2,
+    name: 'Multi-Post Stories',
+    description: `Lorem Ipsum is simply dummy text of the printing and 
+      typesetting industry. Lorem Ipsum has been the industry's standard 
+      dummy text ever since the 1500s, when an unknown printer took a 
+      galley of type and scrambled it to make a type specimen book. 
+      It has survived not only five centuries, but also the leap into 
+      electronic typesetting, remaining essent`,
+    image: './Images/Snapshoot Portfolio.png',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    linkToLive: '#',
+    linkToSource: '#',
+    featured: '',
+  },
+};
 
-// // eslint-disable-next-line no-plusplus
-// for (let i = 0; i < 5; i++) {
-//   // eslint-disable-next-line no-console
-//   console.log(workSection[0].companies[i]);
-//   listItems.textContent = workSection[0].companies[i];
-//   // eslint-disable-next-line no-console
-//   // console.log(listItems);
-// }
-// // eslint-disable-next-line no-console
-// console.log(workSection[0].name);
+const modalContainer = document.querySelector('.modal-container');
 
-// const ulList = document.querySelector('.link-items');
-// // eslint-disable-next-line no-plusplus
-// for (let i = 0; i < 6; i++) {
-//   const liList = document.createElement('li');
-//   liList.classList.add('list-item');
-//   liList.innerText = 'page';
-//   ulList.append(liList);
-// }
+const modalContent = (obj) => {
+  const content = `
+  <div class="card">
+    <div class="card-header">
+      <h3>${obj.name}</h3>
+      <ul class="companies">
+        <li>CANOPY</li>
+        <li>•</li>
+        <li>Back end Dev</li> 
+        <li>•</li>
+        <li>2015</li>
+      </ul>
+      <div class="close-icon" onclick="closePopUp()"> <i class="fa-solid fa-times"></i></div>
+    </div>
+    <div class="card-body">
+      <img src="src="${obj.image}" alt="project-snapshoot">
+    </div>
+    <div class="card-description-container">
+      <div class="card-description">
+        <p>${obj.description}</p>
+      </div>
+      <div class="card-language-buttons">
+        <div class="card-languages">
+          <ul class="languages-used">
+            <li>html</li>
+            <li>css</li>
+            <li>javaScript</li>
+            <li>github</li>
+            <li>ruby</li>
+            <li>Bootstrap</li>
+          </ul>
+        </div>
+        <div class="button-container">
+          <button type="button" class="btn">see live <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+          <button type="button" class="btn">see source <i class="fa-brands fa-github"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+`;
 
-window.addEventListener('DOMContentLoaded',() =>{
-  // eslint-disable-next-line camelcase, no-unused-vars
-  const projectSection = document.getElementById('projects');
-  // projectSection.classList.add('work-section');
+  return content;
+};
 
-  const projectsCard = document.createElement('div');
-  projectsCard.classList.add('projects-card');
+const allActionButton = document.querySelectorAll('.see-details');
+// const seeProjectBtn = document.querySelector('#see-project-1');
+// const closeContainer = document.querySelector('.close-container');
 
-  const cardHeader = document.createElement('div');
-  cardHeader.classList.add('card-header');
-
-  const projects = document.createElement('div');
-  projects.classList.add('projects');
-
-  const cardBody = document.createElement('div');
-  cardBody.classList.add('card-body');
-
-  const authorRoleCompany = document.createElement('div');
-  authorRoleCompany.classList.add('author-role-company');
-
-  const projectTitle = document.createElement('div');
-  projectTitle.classList.add('project-title');
-
-  // eslint-disable-next-line no-unused-vars
-  const ulLinkItems = document.createElement('ul');
-
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < (workSection[0].companies).length; i++) {
-    const listItems = document.createElement('li');
-    listItems.innerText = workSection[0].companies[i];
-    ulLinkItems.append(listItems);
-  }
-
-  authorRoleCompany.append(projectTitle);
-  authorRoleCompany.append(ulLinkItems);
-
-  cardBody.append(authorRoleCompany);
-
-  cardHeader.append(projects);
-  projectsCard.appendChild(cardHeader);
-  projectsCard.append(cardBody);
-
-  projectSection.appendChild(projectsCard);
+allActionButton.forEach((action) => {
+  action.addEventListener('click', (event) => {
+    const { id } = event.target;
+    // eslint-disable-next-line no-restricted-syntax, prefer-const
+    for (let project in workSection) {
+      // eslint-disable-next-line eqeqeq
+      if (workSection[project].id == id.split('-')[2]) {
+        // eslint-disable-next-line no-undef
+        modalContainer.innerHTML = modalContent(workSection[project]);
+      }
+    }
+  });
 });
