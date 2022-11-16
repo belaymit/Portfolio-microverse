@@ -2,18 +2,13 @@ const menuItems = document.querySelectorAll('.nav-center .links li');
 const sectionFooters = document.querySelectorAll('section, footer');
 const navToggle = document.querySelector('.nav-toggle');
 const links = document.querySelector('.links');
-// const workSection = document.getElementById('projects')
-
-// eslint-disable-next-line no-undef
-icon = navToggle.querySelector('.fa-times');
-// eslint-disable-next-line no-undef
-openIcon = navToggle.querySelector('.fa-bars');
+const closeMod = document.querySelector('.closeModal');
+const icon = navToggle.querySelector('.fa-times');
+const openIcon = navToggle.querySelector('.fa-bars');
 
 navToggle.addEventListener('click', () => {
   links.classList.toggle('show-links');
-  // eslint-disable-next-line no-undef
   icon.classList.toggle('close-icon');
-  // eslint-disable-next-line no-undef
   openIcon.classList.toggle('open-icon');
 });
 
@@ -22,8 +17,7 @@ window.addEventListener('scroll', () => {
 
   sectionFooters.forEach((sectionFooter) => {
     const sectionTop = sectionFooter.offsetTop;
-    // eslint-disable-next-line no-restricted-globals
-    if (pageYOffset >= (sectionTop)) {
+    if (window.pageYOffset >= (sectionTop)) {
       currentSection = sectionFooter.getAttribute('id');
     }
   });
@@ -36,9 +30,7 @@ window.addEventListener('scroll', () => {
       links.classList.toggle('show-links');
     });
     links.classList.remove('show-links');
-    // eslint-disable-next-line no-undef
     icon.classList.remove('close-icon');
-    // eslint-disable-next-line no-undef
     openIcon.classList.remove('open-icon');
   });
 });
@@ -146,7 +138,6 @@ const Projects = [
     Source: 'https://github.com/belaymit/Portfolio-microverse',
   },
 ];
-// eslint-disable-next-line no-console
 
 seeProject.forEach((el) => el.addEventListener('click', (e) => {
   const i = e.target.classList[0];
@@ -166,12 +157,12 @@ seeProject.forEach((el) => el.addEventListener('click', (e) => {
       <li>${Projects[i].technologies[5]}</li>`;
 }));
 
-// eslint-disable-next-line no-unused-vars
 function openPopUp() {
   myModal.classList.add('open-popup');
 }
-
-// eslint-disable-next-line no-unused-vars
 function closePopUp() {
   myModal.classList.remove('open-popup');
 }
+
+openPopUp.addEventListener('click', openPopUp);
+closeMod.addEventListener('click', closePopUp);
