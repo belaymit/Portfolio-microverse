@@ -236,7 +236,7 @@ header nav {
   justify-content: center;
   flex-direction: column;
   position: fixed;
-  background-color: red;
+  background-color: #f7f7f9;
   top: 0;
   left: 50%;
   transform: translate(50%, 50%) scale(0.1);
