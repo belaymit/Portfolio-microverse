@@ -744,6 +744,7 @@ textarea::placeholder {
 
   .modal-container .card {
     background: #fff;
+    margin: 0 142px;
     padding: 24px;
     border-radius: 15px;
   }
