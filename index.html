@@ -58,10 +58,10 @@
       </div>
     </section>
   </header>
-
+<main class="main-container">
 <!-- Work Section starts here -->
   <section class="work-section" id="projects">
-    <!-- <div class="projects-card">
+    <div class="projects-card">
       <div class="card-header">
           <div class="projects">
             <img src="./Images/Snapshoot Portfolio__.png" alt="" class="project-screenshot">
@@ -90,7 +90,7 @@
             <li class="courses-list">JavaScript</li>
           </ul>
         </div>
-        <button>See Project</button>
+        <button class="0 see-details" onclick="openPopUp()">See Project</button>
       </div>
     </div>
     <div class="projects-card">
@@ -122,7 +122,7 @@
             <li class="courses-list">JavaScript</li>
           </ul>
         </div>
-        <button>See Project</button>
+        <button class="1 see-details" onclick="openPopUp()">See Project</button>
       </div>
     </div>
     <div class="projects-card">
@@ -154,7 +154,7 @@
             <li class="courses-list">JavaScript</li>
           </ul>
         </div>
-        <button>See Project</button>
+        <button class="2 see-details" onclick="openPopUp()">See Project</button>
         <div class="hand-cursor">
           <img src="./Images/hand-cursor 1.png" alt="">
         </div>
@@ -189,7 +189,7 @@
             <li class="courses-list">JavaScript</li>
           </ul>
         </div>
-        <button>See Project</button>
+        <button class="3 see-details" onclick="openPopUp()">See Project</button>
       </div>
     </div>
     <div class="projects-card">
@@ -219,10 +219,42 @@
             <li class="courses-list">JavaScript</li>
           </ul>
         </div>
-        <button>See Project</button>
+        <button class="4 see-details" onclick="openPopUp()">See Project</button>
       </div>
-    </div> -->
+    </div>
   </section>
+<!--Modal-->
+<section class="modal-container" id="myModal">
+  <div class="card" id="popup">
+    <div class="card-header">
+      <h3 class="project-title">Tonic</h3>
+      <ul class="companies">
+        <li>CANOPY</li>
+        <li>•</li>
+        <li>Back end Dev</li> 
+        <li>•</li>
+        <li>2015</li>
+      </ul>
+      <div class="close-icon closeModal" onclick="closePopUp()"> <i class="fa-solid fa-times"></i></div>
+    </div>
+    <div class="card-body">
+      <img class="project-image" src="#" alt="">
+    </div>
+    <div class="card-description-container">
+      <div class="card-description">
+        <p class="modal-project-description"></p>
+      </div>
+      <div class="card-language-buttons">
+        <div class="card-languages">
+          <ul class="languages-used">
+          </ul>
+        </div>
+        <div class="button-container">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   <!-- ABOUT SECTION STARTS HERE -->
   <section class="about-myself-section" id="about">
     <div class="self-description">
@@ -282,7 +314,7 @@
       </ul>
     </div>
   </section>
-
+</main>
   <!-- FOOTER SECTION STARTS HERE -->
   <footer class="footer-section" id="contact">
     <div class="contact-header">
@@ -311,5 +343,6 @@
   </footer>
 
 <script src="main.js"></script>
+<script src="modal.js"></script>
 </body>
 </html>
