@@ -740,7 +740,7 @@ textarea::placeholder {
 
   .modal-container.open-popup {
     top: 45%;
-    transform: translate(-50%, -50%) scale(0.7);
+    transform: translate(-50%, -50%) scale(0.68);
     visibility: visible;
     width: 100%;
     z-index: 99;
@@ -771,7 +771,7 @@ textarea::placeholder {
 
   .modal-container.open-popup {
     top: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%) scale(0.75);
     visibility: visible;
     width: 100%;
     z-index: 99;
@@ -1038,7 +1038,7 @@ textarea::placeholder {
 
   .modal-container.open-popup {
     top: 50%;
-    transform: translate(-50%, -50%) scale(0.7);
+    transform: translate(-50%, -50%) scale(0.6);
     visibility: visible;
     width: 100%;
     z-index: 99;
