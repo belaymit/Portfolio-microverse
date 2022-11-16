@@ -58,7 +58,7 @@
       </div>
     </section>
   </header>
-
+<main class="main-container">
 <!-- Work Section starts here -->
   <section class="work-section" id="projects">
     <div class="projects-card">
@@ -72,9 +72,9 @@
           <h1 class="project-title">Tonic</h1>
           <ul class="link-items">
             <li class="canopy">CANOPY</li>
-            <span class="list-item">•</span>
+            <li class="list-item">•</li>
             <li class="list-item">Back end dev</li>
-            <span class="list-item">•</span>
+            <li class="list-item">•</li>
             <li class="list-item">2015</li>
           </ul>
         </div>
@@ -90,7 +90,7 @@
             <li class="courses-list">JavaScript</li>
           </ul>
         </div>
-        <button>See Project</button>
+        <button class="0 see-details" onclick="openPopUp()">See Project</button>
       </div>
     </div>
     <div class="projects-card">
@@ -104,9 +104,9 @@
           <h1 class="project-title">Multi-Post Stories</h1>
           <ul class="link-items">
             <li class="canopy">Facebook</li>
-            <span class="list-item">•</span>
+            <li class="list-item">•</li>
             <li class="list-item">Full Stack Dev</li>
-            <span class="list-item">•</span>
+            <li class="list-item">•</li>
             <li class="list-item">2015</li>
           </ul>
         </div>
@@ -122,7 +122,7 @@
             <li class="courses-list">JavaScript</li>
           </ul>
         </div>
-        <button>See Project</button>
+        <button class="1 see-details" onclick="openPopUp()">See Project</button>
       </div>
     </div>
     <div class="projects-card">
@@ -136,9 +136,9 @@
           <h1 class="project-title">Facebook360</h1>
           <ul class="link-items">
             <li class="canopy">Facebook</li>
-            <span class="list-item">•</span>
+            <li class="list-item">•</li>
             <li class="list-item">Full Stack Dev</li>
-            <span class="list-item">•</span>
+            <li class="list-item">•</li>
             <li class="list-item">2015</li>
           </ul>
         </div>
@@ -154,7 +154,7 @@
             <li class="courses-list">JavaScript</li>
           </ul>
         </div>
-        <button>See Project</button>
+        <button class="2 see-details" onclick="openPopUp()">See Project</button>
         <div class="hand-cursor">
           <img src="./Images/hand-cursor 1.png" alt="">
         </div>
@@ -171,9 +171,9 @@
           <h1 class="project-title">Uber Navigation</h1>
           <ul class="link-items">
             <li class="canopy">Uber</li>
-            <span class="list-item">•</span>
+            <li class="list-item">•</li>
             <li class="list-item">Lead Developer</li>
-            <span class="list-item">•</span>
+            <li class="list-item">•</li>
             <li class="list-item">2018</li>
           </ul>
         </div>
@@ -189,21 +189,23 @@
             <li class="courses-list">JavaScript</li>
           </ul>
         </div>
-        <button>See Project</button>
+        <button class="3 see-details" onclick="openPopUp()">See Project</button>
       </div>
     </div>
     <div class="projects-card">
       <div class="card-header">
-          <img src="./Images/Professional-art-printing.png" alt="" class="project-screenshot">
+        <div class="projects">
+          <img src="./Images/Snapshoot Portfolio.png" alt="" class="project-screenshot">
+        </div>
       </div>
       <div class="card-body">
         <div class="author-role-company">
           <h1 class="project-title">Multi-Post <br> Stories</h1>
           <ul class="link-items">
             <li class="canopy">CANOPY</li>
-            <span class="list-item">•</span>
+            <li class="list-item">•</li>
             <li class="list-item">Back end dev</li>
-            <span class="list-item">•</span>
+            <li class="list-item">•</li>
             <li class="list-item">2015</li>
           </ul>
         </div>
@@ -219,12 +221,43 @@
             <li class="courses-list">JavaScript</li>
           </ul>
         </div>
-        <button>See Project</button>
+        <button class="4 see-details" onclick="openPopUp()">See Project</button>
       </div>
     </div>
   </section>
- 
-  <!-- WORK SECTION STARTS HERE -->
+<!--Modal-->
+<section class="modal-container" id="myModal">
+  <div class="card" id="popup">
+    <div class="card-header">
+      <h3 class="modal-project-title"></h3>
+      <ul class="companies">
+        <li>CANOPY</li>
+        <li>•</li>
+        <li>Back end Dev</li> 
+        <li>•</li>
+        <li>2015</li>
+      </ul>
+      <div class="close-icon closeModal" onclick="closePopUp()"> <i class="fa-solid fa-times"></i></div>
+    </div>
+    <div class="card-body">
+      <img class="project-image" src="#" alt="">
+    </div>
+    <div class="card-description-container">
+      <div class="card-description">
+        <p class="modal-project-description"></p>
+      </div>
+      <div class="card-language-buttons">
+        <div class="card-languages">
+          <ul class="languages-used">
+          </ul>
+        </div>
+        <div class="button-container">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- ABOUT SECTION STARTS HERE -->
   <section class="about-myself-section" id="about">
     <div class="self-description">
       <h1>About <br> Myself</h1>
@@ -283,7 +316,7 @@
       </ul>
     </div>
   </section>
-
+</main>
   <!-- FOOTER SECTION STARTS HERE -->
   <footer class="footer-section" id="contact">
     <div class="contact-header">
@@ -312,5 +345,6 @@
   </footer>
 
 <script src="main.js"></script>
+<!-- <script src="modal.js"></script> -->
 </body>
 </html>

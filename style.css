@@ -59,6 +59,7 @@ button:hover {
   width: 100%;
 }
 
+/* modal */
 header nav {
   background: #fff;
   margin-top: 0;
@@ -226,6 +227,171 @@ header nav {
   display: block;
 }
 
+/* modal */
+
+.modal-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  background-color: #f7f7f9;
+  top: 0;
+  left: 50%;
+  transform: translate(50%, 50%) scale(0.1);
+  visibility: hidden;
+  transition: transform 0.5s, top 0.5s;
+}
+
+.modal-container .card {
+  margin: 0;
+  background: #fff;
+  padding: 0;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal-container.open-popup {
+  top: 55%;
+  transform: translate(-50%, -50%) scale(0.8);
+  visibility: visible;
+  width: 100%;
+  z-index: 99;
+}
+
+.card .card-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card .card-header h3 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+  margin-top: 0;
+  padding-inline-start: 0;
+}
+
+.card .card-header .close-icon {
+  position: absolute;
+  top: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  right: 0;
+  cursor: pointer;
+}
+
+.card .card-header .companies {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+.card-languages .languages-used li {
+  list-style: none;
+  background: #ebebee;
+  border-radius: 8px;
+  margin-left: 0;
+  padding: 4px 12px;
+  color: #6070ff;
+}
+
+.card .card-header .companies li {
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #7a869a;
+  margin-bottom: 20px;
+}
+
+.card .card-body img {
+  width: 80%;
+}
+
+.self-description p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.contact-header p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #ebebff;
+  margin: 12px 24px 0 24px;
+}
+
+.card .card-description p {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.card .card-languages {
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-languages .languages-used {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-inline-start: 0;
+}
+
+.button-container {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 24px;
+}
+
+.button-container .btn {
+  background-color: #fff;
+  border: 1px solid #396df2;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #396df2;
+  cursor: pointer;
+  margin: 28px 0;
+  outline: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  line-height: 24px;
+  text-transform: capitalize;
+  padding: 13px;
+  transition: all 0.5s ease;
+}
+
+.button-container .btn:hover {
+  background: #5076cf;
+  color: #fff;
+}
+
+/* end of modal */
+
 .headline {
   margin: 32px 12px 12px 12px;
 }
@@ -288,6 +454,7 @@ header nav {
   display: grid;
   grid-template-columns: 1fr;
   min-height: 100vh;
+  position: relative;
 }
 
 .projects-cards:first-child {
@@ -295,7 +462,7 @@ header nav {
 }
 
 .projects-card {
-  margin: 88px 24px 0 12px;
+  margin: 88px 24px 0 24px;
   border-radius: 10px;
   background-color: #fff;
   padding: 12px;
@@ -404,14 +571,6 @@ header nav {
   margin: 114px 24px 0 24px;
 }
 
-.self-description p {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #344563;
-}
-
 .self-description .social-media-links {
   margin-left: -20px;
 }
@@ -476,17 +635,6 @@ header nav {
   text-align: center;
   color: #fff;
   margin-bottom: 0;
-}
-
-.contact-header p {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-  color: #ebebff;
-  margin: 12px 24px 0 24px;
 }
 
 .contact-form {
@@ -573,6 +721,30 @@ textarea::placeholder {
     margin: 36px 64px 0 64px;
     background: transparent;
   }
+
+  .card .card-body img {
+    width: 80%;
+    object-fit: contain;
+  }
+
+  .modal-container {
+    padding: 12px 0;
+  }
+
+  .modal-container .card {
+    background: #fff;
+    width: 80%;
+    padding: 24px;
+    border-radius: 15px;
+  }
+
+  .modal-container.open-popup {
+    top: 45%;
+    transform: translate(-50%, -50%) scale(0.68);
+    visibility: visible;
+    width: 100%;
+    z-index: 99;
+  }
 }
 
 /* Large screen - Desktop */
@@ -588,6 +760,98 @@ textarea::placeholder {
   .navigation {
     margin: 12px 155px;
   }
+
+  /* modal */
+
+  .modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-container.open-popup {
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.75);
+    visibility: visible;
+    width: 100%;
+    z-index: 99;
+  }
+
+  .modal-container .card {
+    background: #fff;
+    padding: 0;
+    border-radius: 15px;
+    width: 100%;
+  }
+
+  .modal-container .card .card-header .companies {
+    display: flex;
+    gap: 12px;
+    margin-top: -20px;
+    padding-top: 0;
+    padding-inline-start: 0;
+  }
+
+  .modal-container .card .card-header .close-icon {
+    position: absolute;
+    top: 10;
+    right: 0;
+    margin-right: 20px;
+  }
+
+  .modal-container .card .card-description-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    column-gap: 24px;
+  }
+
+  .modal-container .card .card-languages .languages-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-inline-start: 0;
+    padding-bottom: 15px;
+    border-bottom: 0.3px solid #d4d7dd;
+  }
+
+  .modal-container .card .card-description-container .card-language-buttons .button-container button {
+    background: #fff;
+    border: 1px solid #ebecf0;
+    box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+    border-radius: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    color: #396ff2;
+  }
+
+  .hand-cursor img {
+    width: 57px;
+    height: 57px;
+  }
+
+  .projects img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card .card-body img {
+    width: 70%;
+  }
+
+  .modal-container .card .card-description-container .card-language-buttons button:hover {
+    background: #889ed6;
+    color: #fff;
+  }
+
+  /* modal */
 
   .portfolio-header nav {
     width: 100%;
@@ -656,26 +920,12 @@ textarea::placeholder {
     margin: 0;
   }
 
-  .projects-card:last-child {
-    display: none;
-  }
-
   .projects-card:nth-child(2n) {
     flex-direction: row-reverse;
   }
 
-  .projects-card:nth-child(5) {
-    display: none;
-  }
-
   .projects-card:first-child {
     display: flex;
-  }
-
-  .projects img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 
   .courses-list:nth-child(2) {
@@ -684,11 +934,6 @@ textarea::placeholder {
 
   .card-body.hand-cursor-position {
     position: relative;
-  }
-
-  .hand-cursor img {
-    width: 57px;
-    height: 57px;
   }
 
   .hand-cursor {
@@ -777,5 +1022,35 @@ textarea::placeholder {
   .self-description {
     margin-left: 124px;
     margin-top: 0;
+  }
+
+  .card .card-body img {
+    width: 80%;
+    object-fit: contain;
+  }
+
+  .modal-container .card {
+    background: #fff;
+    width: 80%;
+    padding: 24px;
+    border-radius: 15px;
+  }
+
+  .modal-container.open-popup {
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
+    visibility: visible;
+    width: 100%;
+    z-index: 99;
+  }
+
+  .modal-container .card .card-description-container {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    column-gap: 24px;
+  }
+
+  .modal-container .card .card-description-container .card-language-buttons .button-container button {
+    font-size: 15px;
   }
 }
