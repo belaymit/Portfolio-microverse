@@ -227,9 +227,6 @@ header nav {
   display: block;
 }
 
-.main-container {
-  /* position: relative; */
-}
 /* modal */
 .modal-container {
   background-color: #3030c0;
@@ -266,7 +263,7 @@ header nav {
 }
 
 .card .card-header h3 {
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -290,9 +287,17 @@ header nav {
   padding-inline-start: 0;
 }
 
+.card-languages .languages-used li {
+  list-style: none;
+  background: #ebebee;
+  border-radius: 8px;
+  margin-left: 0;
+  padding: 4px 12px;
+}
+
 .card .card-header .companies li {
   list-style: none;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
@@ -301,13 +306,31 @@ header nav {
   margin-bottom: 20px;
 }
 
-
 .card-body img {
   width: 100%;
 }
 
+.self-description p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.contact-header p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #ebebff;
+  margin: 12px 24px 0 24px;
+}
+
 .card .card-description p {
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -324,14 +347,6 @@ header nav {
   display: flex;
   gap: 12px;
   padding-inline-start: 0;
-}
-
-.card-languages .languages-used li {
-  list-style: none;
-  background: #ebebee;
-  border-radius: 8px;
-  margin-left: 0;
-  padding: 4px 12px;
 }
 
 .button-container {
@@ -546,14 +561,6 @@ header nav {
   margin: 114px 24px 0 24px;
 }
 
-.self-description p {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #344563;
-}
-
 .self-description .social-media-links {
   margin-left: -20px;
 }
@@ -618,17 +625,6 @@ header nav {
   text-align: center;
   color: #fff;
   margin-bottom: 0;
-}
-
-.contact-header p {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-  color: #ebebff;
-  margin: 12px 24px 0 24px;
 }
 
 .contact-form {
@@ -730,7 +726,9 @@ textarea::placeholder {
   .navigation {
     margin: 12px 155px;
   }
-/* modal */
+
+  /* modal */
+
   .modal-container {
     margin: 77px 142px;
   }
@@ -741,42 +739,42 @@ textarea::placeholder {
     border-radius: 15px;
   }
 
-.modal-container .card .card-header .companies {
-  display: flex;
-  gap: 12px;
-  margin-top: -20px;
-  padding-top: 0;
-  padding-inline-start: 0;
-}
+  .modal-container .card .card-header .companies {
+    display: flex;
+    gap: 12px;
+    margin-top: -20px;
+    padding-top: 0;
+    padding-inline-start: 0;
+  }
 
-.modal-container .card .card-header .close-icon {
-  position: absolute;
-  top: 10;
-  right: 0;
-  margin-right: 20px;
-}
+  .modal-container .card .card-header .close-icon {
+    position: absolute;
+    top: 10;
+    right: 0;
+    margin-right: 20px;
+  }
 
-.modal-container .card .card-description-container {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  column-gap: 24px;
-}
+  .modal-container .card .card-description-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    column-gap: 24px;
+  }
 
-.modal-container .card .card-languages .languages-used {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding-inline-start: 0;
-  padding-bottom: 15px;
-  border-bottom: 0.3px solid #d4d7dd;
-}
+  .modal-container .card .card-languages .languages-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-inline-start: 0;
+    padding-bottom: 15px;
+    border-bottom: 0.3px solid #d4d7dd;
+  }
 
-.modal-container .card .card-description-container .card-language-buttons .button-container button {
-    background: #FFFFFF;
-    border: 1px solid #EBECF0;
-    box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08);
+  .modal-container .card .card-description-container .card-language-buttons .button-container button {
+    background: #fff;
+    border: 1px solid #ebecf0;
+    box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
     border-radius: 16px;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -786,9 +784,9 @@ textarea::placeholder {
     gap: 5px;
     text-align: center;
     color: #396ff2;
-  }  
+  }
 
-/* modal */
+  /* modal */
 
   .portfolio-header nav {
     width: 100%;
@@ -857,16 +855,8 @@ textarea::placeholder {
     margin: 0;
   }
 
-  .projects-card:last-child {
-    display: none;
-  }
-
   .projects-card:nth-child(2n) {
     flex-direction: row-reverse;
-  }
-
-  .projects-card:nth-child(5) {
-    display: none;
   }
 
   .projects-card:first-child {
@@ -978,5 +968,15 @@ textarea::placeholder {
   .self-description {
     margin-left: 124px;
     margin-top: 0;
+  }
+
+  .modal-container .card .card-description-container {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    column-gap: 24px;
+  }
+
+  .modal-container .card .card-description-container .card-language-buttons .button-container button {
+    font-size: 15px;
   }
 }
