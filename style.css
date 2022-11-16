@@ -59,6 +59,7 @@ button:hover {
   width: 100%;
 }
 
+/* modal */
 header nav {
   background: #fff;
   margin-top: 0;
@@ -226,6 +227,146 @@ header nav {
   display: block;
 }
 
+.main-container {
+  /* position: relative; */
+}
+/* modal */
+.modal-container {
+  background-color: #3030c0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.modal-container .card {
+  background: #fff;
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.card.open-popup {
+  top: 50%;
+  transform: translate(-50%, -80%) scale(1);
+  visibility: visible;
+  z-index: 99;
+}
+
+.card .card-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card .card-header h3 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+  margin-top: 0;
+}
+
+.card .card-header .close-icon {
+  position: absolute;
+  top: 0;
+  margin-top: 10px;
+  right: 0;
+  cursor: pointer;
+}
+
+.card .card-header .companies {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+.card .card-header .companies li {
+  list-style: none;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #7a869a;
+  margin-bottom: 20px;
+}
+
+
+.card-body img {
+  width: 100%;
+}
+
+.card .card-description p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.card .card-languages {
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-languages .languages-used {
+  display: flex;
+  gap: 12px;
+  padding-inline-start: 0;
+}
+
+.card-languages .languages-used li {
+  list-style: none;
+  background: #ebebee;
+  border-radius: 8px;
+  margin-left: 0;
+  padding: 4px 12px;
+}
+
+.button-container {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 24px;
+}
+
+.button-container button {
+  background-color: #fff;
+  border: 1px solid #396df2;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #396df2;
+  cursor: pointer;
+  margin: 28px 0;
+  outline: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  line-height: 24px;
+  text-transform: capitalize;
+  padding: 13px;
+  transition: all 0.5s ease;
+}
+
+.button-container button:hover {
+  background: #5076cf;
+  color: #fff;
+}
+
+/* end of modal */
+
 .headline {
   margin: 32px 12px 12px 12px;
 }
@@ -288,6 +429,7 @@ header nav {
   display: grid;
   grid-template-columns: 1fr;
   min-height: 100vh;
+  position: relative;
 }
 
 .projects-cards:first-child {
@@ -588,6 +730,65 @@ textarea::placeholder {
   .navigation {
     margin: 12px 155px;
   }
+/* modal */
+  .modal-container {
+    margin: 77px 142px;
+  }
+
+  .modal-container .card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 15px;
+  }
+
+.modal-container .card .card-header .companies {
+  display: flex;
+  gap: 12px;
+  margin-top: -20px;
+  padding-top: 0;
+  padding-inline-start: 0;
+}
+
+.modal-container .card .card-header .close-icon {
+  position: absolute;
+  top: 10;
+  right: 0;
+  margin-right: 20px;
+}
+
+.modal-container .card .card-description-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  column-gap: 24px;
+}
+
+.modal-container .card .card-languages .languages-used {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-inline-start: 0;
+  padding-bottom: 15px;
+  border-bottom: 0.3px solid #d4d7dd;
+}
+
+.modal-container .card .card-description-container .card-language-buttons .button-container button {
+    background: #FFFFFF;
+    border: 1px solid #EBECF0;
+    box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08);
+    border-radius: 16px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    color: #396ff2;
+  }  
+
+/* modal */
 
   .portfolio-header nav {
     width: 100%;
