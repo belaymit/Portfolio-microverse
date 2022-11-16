@@ -236,7 +236,7 @@ header nav {
   justify-content: center;
   flex-direction: column;
   position: fixed;
-  background: #f7f7f9;
+  background-color: red;
   top: 0;
   left: 50%;
   transform: translate(50%, 50%) scale(0.1);
@@ -245,9 +245,9 @@ header nav {
 }
 
 .modal-container .card {
-  margin: 64px 0;
+  margin: 0;
   background: #fff;
-  padding: 12px 32px;
+  padding: 0;
   height: 100%;
   border-radius: 15px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -282,6 +282,8 @@ header nav {
   position: absolute;
   top: 0;
   margin-top: 10px;
+  margin-right: 10px;
+  font-size: 20px;
   right: 0;
   cursor: pointer;
 }
@@ -719,6 +721,30 @@ textarea::placeholder {
     margin: 36px 64px 0 64px;
     background: transparent;
   }
+
+  .card .card-body img {
+    width: 80%;
+    object-fit: contain;
+  }
+
+  .modal-container {
+    padding: 12px 0;
+  }
+
+  .modal-container .card {
+    background: #fff;
+    width: 80%;
+    padding: 24px;
+    border-radius: 15px;
+  }
+
+  .modal-container.open-popup {
+    top: 45%;
+    transform: translate(-50%, -50%) scale(0.7);
+    visibility: visible;
+    width: 100%;
+    z-index: 99;
+  }
 }
 
 /* Large screen - Desktop */
@@ -753,8 +779,9 @@ textarea::placeholder {
 
   .modal-container .card {
     background: #fff;
-    padding: 24px;
+    padding: 0;
     border-radius: 15px;
+    width: 100%;
   }
 
   .modal-container .card .card-header .companies {
@@ -1004,14 +1031,14 @@ textarea::placeholder {
 
   .modal-container .card {
     background: #fff;
-    width: 70%;
+    width: 80%;
     padding: 24px;
     border-radius: 15px;
   }
 
   .modal-container.open-popup {
     top: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%) scale(0.7);
     visibility: visible;
     width: 100%;
     z-index: 99;
