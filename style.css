@@ -227,20 +227,17 @@ header nav {
   display: block;
 }
 
-/* modal */
-.modal-container {
-  background-color: #3030c0;
+.main-container {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
+/* modal */
 
-.modal-container .card {
-  background: #fff;
+.modal-container {
+  display: flex;
   width: 100%;
-  padding: 12px 24px;
-  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: absolute;
   top: 0;
   left: 50%;
@@ -249,9 +246,16 @@ header nav {
   transition: transform 0.4s, top 0.4s;
 }
 
-.card.open-popup {
-  top: 50%;
-  transform: translate(-50%, -80%) scale(1);
+.modal-container .card {
+  background: #fff;
+  padding: 12px 32px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal-container.open-popup {
+  top: 30%;
+  transform: translate(-50%, -50%) scale(1);
   visibility: visible;
   z-index: 99;
 }
@@ -270,6 +274,7 @@ header nav {
   line-height: 44px;
   color: #172b4d;
   margin-top: 0;
+  padding-inline-start: 0;
 }
 
 .card .card-header .close-icon {
@@ -345,6 +350,7 @@ header nav {
 
 .card-languages .languages-used {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   padding-inline-start: 0;
 }
@@ -730,7 +736,9 @@ textarea::placeholder {
   /* modal */
 
   .modal-container {
-    margin: 77px 142px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .modal-container .card {
