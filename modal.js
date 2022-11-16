@@ -17,15 +17,15 @@ const Projects = [
       'ruby',
       'Bootstrap',
     ],
-    Live: 'https://miliyonayalew.github.io/Portfolio/',
-    Source: 'https://github.com/Miliyonayalew/Portfolio',
+    Live: 'https://github.com/belaymit/Portfolio-microverse',
+    Source: 'https://github.com/belaymit/Portfolio-microverse',
   },
   {
     id: 2,
     name: 'Multi-Post Stories',
     description:
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essene',
-    image: 'Images/Snapshoot__Portfolio.pn',
+    image: 'Images/Snapshoot__Portfolio.png',
     technologies: [
       'html',
       'css',
@@ -34,8 +34,8 @@ const Projects = [
       'ruby',
       'Bootstrap',
     ],
-    Live: 'https://miliyonayalew.github.io/Portfolio/',
-    Source: 'https://github.com/Miliyonayalew/Portfolio',
+    Live: 'https://github.com/belaymit/Portfolio-microverse',
+    Source: 'https://github.com/belaymit/Portfolio-microverse',
   },
   {
     name: 'Multi-Post Stories',
@@ -50,8 +50,8 @@ const Projects = [
       'ruby',
       'Bootstrap',
     ],
-    Live: 'https://miliyonayalew.github.io/Portfolio/',
-    Source: 'https://github.com/Miliyonayalew/Portfolio',
+    Live: 'https://github.com/belaymit/Portfolio-microverse',
+    Source: 'https://github.com/belaymit/Portfolio-microverse',
   },
   {
     name: 'Multi-Post Stories',
@@ -66,8 +66,8 @@ const Projects = [
       'ruby',
       'Bootstrap',
     ],
-    Live: 'https://miliyonayalew.github.io/Portfolio/',
-    Source: 'https://github.com/Miliyonayalew/Portfolio',
+    Live: 'https://github.com/belaymit/Portfolio-microverse',
+    Source: 'https://github.com/belaymit/Portfolio-microverse',
   },
   {
     name: 'Uber Navigation',
@@ -82,8 +82,8 @@ const Projects = [
       'ruby',
       'Bootstrap',
     ],
-    Live: 'https://miliyonayalew.github.io/Portfolio/',
-    Source: 'https://github.com/Miliyonayalew/Portfolio',
+    Live: 'https://github.com/belaymit/Portfolio-microverse',
+    Source: 'https://github.com/belaymit/Portfolio-microverse',
   },
   {
     name: 'Uber Navigation',
@@ -98,14 +98,13 @@ const Projects = [
       'ruby',
       'Bootstrap',
     ],
-    Live: 'https://miliyonayalew.github.io/Portfolio/',
-    Source: 'https://github.com/Miliyonayalew/Portfolio',
+    Live: 'https://github.com/belaymit/Portfolio-microverse',
+    Source: 'https://github.com/belaymit/Portfolio-microverse',
   },
 ];
 // eslint-disable-next-line no-console
 
 seeProject.forEach((el) => el.addEventListener('click', (e) => {
-  // eslint-disable-next-line no-empty, no-plusplus
   const i = e.target.classList[0];
   document.querySelector('.project-image').src = Projects[i].image;
   document.querySelector('.project-title').innerHTML = Projects[i].name;
