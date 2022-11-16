@@ -1,6 +1,5 @@
 const myModal = document.getElementById('myModal');
 const seeProject = document.querySelectorAll('.see-details');
-const closeMod = document.querySelector('.closeModal');
 
 const Projects = [
   {
@@ -107,39 +106,27 @@ const Projects = [
 seeProject.forEach((el) => el.addEventListener('click', (e) => {
   const i = e.target.classList[0];
   document.querySelector('.project-image').src = Projects[i].image;
-  document.querySelector('.project-title').innerHTML = Projects[i].name;
+  document.querySelector('.modal-project-title').innerText = Projects[i].name;
   document.querySelector('.modal-project-description').innerHTML = Projects[i].description;
   document.querySelector('.button-container')
     .innerHTML = ` <button onclick="${Projects[i].Live}" type="button" class="btn">see live <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></button>
                     <button onclick="${Projects[i].Source}" type="button" class="btn">see source <span> <i class="fa-brands fa-github"></i></button>`;
   document.querySelector('.languages-used')
     .innerHTML = `<li>
-      ${Projects[i].technologies[0]}</li>i
+      ${Projects[i].technologies[0]}</li>
       <li>${Projects[i].technologies[1]}</li>
-      <li 
-      ${Projects[i].technologies[2]}</li>
-      <li>
-      ${Projects[i].technologies[3]}</li>
-      <li>
-      ${Projects[i].technologies[4]}</li>
-      <li>
-      ${Projects[i].technologies[5]}</li>`;
-  myModal.style.display = 'block';
+      <li> ${Projects[i].technologies[2]}</li>
+      <li>${Projects[i].technologies[3]}</li>
+      <li>${Projects[i].technologies[4]}</li>
+      <li>${Projects[i].technologies[5]}</li>`;
 }));
 
-const popup = document.getElementById('popup');
 // eslint-disable-next-line no-unused-vars
 function openPopUp() {
-  popup.classList.add('open-popup');
+  myModal.classList.add('open-popup');
 }
 
 // eslint-disable-next-line no-unused-vars
 function closePopUp() {
-  popup.classList.remove('open-popup');
+  myModal.classList.remove('open-popup');
 }
-
-function closeModal() {
-  myModal.style.display = 'none';
-}
-
-closeMod.addEventListener('click', closeModal);
