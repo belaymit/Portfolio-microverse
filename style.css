@@ -243,7 +243,7 @@ header nav {
   left: 50%;
   transform: translate(-50%, -50%) scale(0.1);
   visibility: hidden;
-  transition: transform 0.4s, top 0.4s;
+  transition: transform 0.5s, top 0.5s;
 }
 
 .modal-container .card {
@@ -254,7 +254,7 @@ header nav {
 }
 
 .modal-container.open-popup {
-  top: 30%;
+  top: 20%;
   transform: translate(-50%, -50%) scale(1);
   visibility: visible;
   z-index: 99;
