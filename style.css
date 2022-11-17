@@ -681,6 +681,16 @@ textarea::placeholder {
   border: 1px solid #384404;
 }
 
+.error {
+  color: rgb(204, 11, 11);
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding-bottom: 0.8rem;
+  padding-left: 0.5rem;
+  margin-left: 15px;
+  display: none;
+}
+
 .contact-form .input-field .btn {
   padding: 12px 16px;
   width: 140px;
