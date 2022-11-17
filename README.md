@@ -2,18 +2,17 @@
 
 # Mobile-First simple Portfolio
 
-> This is the first Mobile-first portfolio and is implemented using HTML and CSS only.
-
-> It contains three section- header section, projects and works section and about section.
-
+> This is the first Mobile-first portfolio and is implemented using HTML and CSS and javaScript.
+> It contains three sections-> header section, projects and works section and about section.
 > This website is for both small screen and desktop
-
 > Me and @Andrea added contact form as our first pair-programming project
+> We - me and @Kola Kolade added pop-up menu, detail pop-up modal and form-validation
 
 ## Built With
 
 - HTML
 - CSS
+- Vanilla javaScript
 
 ## Getting Started
 
@@ -21,7 +20,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Basic understanding of - HTML - CSS - Figma design
+Basic understanding of - HTML - CSS - javaScript and DOM manipulation Figma design
 
 ### Setup
 
@@ -56,6 +55,14 @@ https://www.loom.com/share/85d92450256e426185a910d44ef19930
 
 - GitHub: [@githubhandle](https://github.com/rivasbolinga)
 
+**Author3**
+
+-GitHub: [@githubhandle](https://github.com/susangoga)
+
+**Author4**
+
+-GitHub: [@githubhandle](https://github.com/kkolade/kolakolade.me)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -69,7 +76,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - I am grateful for senor Microverse students
-- I would like to appreciate and thank @Andrea Rivas for her collaboration
+- I would like to appreciate and thank @Andrea Rivas, @susangoga, @kkolade  for their collaboration
 
 ## 📝 License
 

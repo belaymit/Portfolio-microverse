@@ -5,7 +5,14 @@ const regEx = /^[a-z0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
 
 function validate(e) {
   const emailVal = email.value;
+  const formData = {
+    fullName: document.querySelector('#name-input').value,
+    emailAddress: document.querySelector('#email-input').value,
+    message: document.querySelector('.textarea').value,
+  };
+
   if (emailVal.match(regEx)) {
+    localStorage.setItem('DATA', JSON.stringify(formData));
     error.style.display = 'none';
     email.style.border = '1px solid #d0d9d4';
     return true;
@@ -18,3 +25,13 @@ function validate(e) {
 }
 
 form.addEventListener('submit', validate);
+const getInfo = localStorage.getItem('DATA');
+const getContactInfo = JSON.parse(getInfo);
+
+window.addEventListener('load', () => {
+  if (localStorage.getItem('DATA')) {
+    document.querySelector('#name-input').value = getContactInfo.fullName;
+    document.querySelector('#email-input').value = getContactInfo.emailAddress;
+    document.querySelector('.textarea').value = getContactInfo.message;
+  }
+});
