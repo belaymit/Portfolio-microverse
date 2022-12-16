@@ -41,10 +41,10 @@ const seeProject = document.querySelectorAll('.see-details');
 const Projects = [
   {
     id: 1,
-    name: 'Tonic',
+    name: 'Awesome Books',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
-    image: 'Images/Snapshoot Portfolio__.png',
+      'This web app is a simple web page that allows the user to enter book details (title and author) and then stores and retrieves the information from local storage. I used HTML, CSS and ES6 to develop it.',
+    image: 'Images/awesome-books.PNG',
     technologies: [
       'html',
       'css',
@@ -58,10 +58,10 @@ const Projects = [
   },
   {
     id: 2,
-    name: 'Multi-Post Stories',
+    name: 'Capstone Project I',
     description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essene',
-    image: 'Images/Snapshoot__Portfolio.png',
+    'This is Microverse HTML/CSS and JS Capstone Project. I designed a conference website and added live data using JavaScript objects.',
+    image: 'Images/conference.PNG',
     technologies: [
       'html',
       'css',
@@ -74,10 +74,10 @@ const Projects = [
     Source: 'https://github.com/belaymit/Portfolio-microverse',
   },
   {
-    name: 'Multi-Post Stories',
+    name: 'Todo List',
     description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
-    image: 'Images/Snapshoot Portfolio.png',
+    'This project is the most interesting of all of my projects. It is implemented using HTML, CSS and ES-6. I also used webpack and JavaScript Modules. I really learned a lot from this project.',
+    image: 'Images/to-do-List_up.PNG',
     technologies: [
       'html',
       'css',
